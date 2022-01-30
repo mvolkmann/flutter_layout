@@ -101,6 +101,7 @@ class MyListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      //scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
         return Text('Text #${index + 1}').padding(5);
       },
