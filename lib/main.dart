@@ -14,6 +14,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Layout',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: TextTheme(
+          // Material default text style
+          bodyText2: TextStyle(color: Colors.purple),
+        ),
       ),
       home: const Home(),
     );
@@ -32,6 +36,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        //elevation: 0, // removes shadow at bottom
         title: Text('My Demo'),
       ),
       body: Column(
@@ -46,6 +51,12 @@ class _HomeState extends State<Home> {
             height: 200,
             child: MyListView(),
           ).border().padding(10),
+          Text(
+            'Bold Text',
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ],
       ),
     );
