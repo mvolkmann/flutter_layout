@@ -3,26 +3,19 @@ import './widget_extensions.dart';
 
 const itemCount = 20;
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Layout',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        textTheme: TextTheme(
-          // Material default text style
-          bodyText2: TextStyle(color: Colors.purple),
+void main() => runApp(
+      MaterialApp(
+        title: 'Flutter Layout',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          textTheme: TextTheme(
+            // Material default text style
+            bodyText2: TextStyle(color: Colors.purple),
+          ),
         ),
+        home: const Home(),
       ),
-      home: const Home(),
     );
-  }
-}
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
